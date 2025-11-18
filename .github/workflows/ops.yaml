@@ -38,8 +38,6 @@ jobs:
     if: ${{ !contains(github.actor, 'dependabot') }}
     steps:
       - uses: actions/checkout@v4
-        with:
-          persist-credentials: false
       - name: gcp auth
         uses: google-github-actions/auth@v2
         with:
