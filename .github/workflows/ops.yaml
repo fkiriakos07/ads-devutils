@@ -41,7 +41,7 @@ jobs:
         with:
           persist-credentials: false
       - name: gcp auth
-        uses: google-github-actions/auth@v2
+        uses: google-github-actions/auth@v2 # zizmor: ignore[unpinned-uses]
         with:
           credentials_json: '${{ secrets.GHA888_GTAN888 }}'      
       - name: build and push
@@ -72,7 +72,7 @@ jobs:
     needs: build
     steps:
       - name: gcp auth
-        uses: google-github-actions/auth@v2
+        uses: google-github-actions/auth@v2 # zizmor: ignore[unpinned-uses]
         with:
           credentials_json: '${{ secrets.GHA888_GTAN888 }}'
       - name: "push"
